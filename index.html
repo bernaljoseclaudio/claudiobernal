@@ -22,15 +22,15 @@ html{scroll-behavior:smooth;}
 body{font-family:'Sora',sans-serif;background:var(--paper);color:var(--ink);line-height:1.7;overflow-x:hidden;}
 
 /* LANG BAR */
-.lang-bar{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;justify-content:space-between;align-items:center;padding:.6rem 2rem;background:rgba(26,92,46,0.97);backdrop-filter:blur(8px);}
-.brand-top{font-size:.72rem;color:rgba(255,255,255,0.7);letter-spacing:.08em;}
+
+
 .brand-top strong{color:#fff;}
-.lang-btns{display:flex;gap:.4rem;}
-.lang-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8);font-family:'Sora',sans-serif;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;padding:.28rem .8rem;border-radius:20px;cursor:pointer;transition:all .2s;}
-.lang-btn.active,.lang-btn:hover{background:#fff;color:var(--forest);border-color:#fff;}
+
+
+
 
 /* HERO */
-.hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;padding-top:3rem;background:linear-gradient(135deg,var(--forest) 0%,#0d3d1e 100%);position:relative;overflow:hidden;}
+.hero{min-height:100vh;display:grid;grid-template-columns:55% 45%;padding-top:0;background:linear-gradient(135deg,var(--forest) 0%,#0d3d1e 100%);position:relative;overflow:hidden;}
 .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(77,184,112,.18) 0%,transparent 50%),radial-gradient(circle at 20% 80%,rgba(232,124,48,.12) 0%,transparent 40%);}
 .hero-pattern{position:absolute;inset:0;opacity:.04;background-image:repeating-linear-gradient(45deg,#fff 0,#fff 1px,transparent 0,transparent 50%);background-size:30px 30px;}
 .hero-left{display:flex;flex-direction:column;justify-content:center;padding:5rem 3rem 4rem 5rem;position:relative;z-index:1;}
@@ -71,7 +71,7 @@ body{font-family:'Sora',sans-serif;background:var(--paper);color:var(--ink);line
 .stat-l{font-size:.68rem;color:rgba(255,255,255,.6);margin-top:.3rem;text-transform:uppercase;letter-spacing:.08em;}
 
 /* NAV */
-nav{position:sticky;top:2.4rem;z-index:100;background:rgba(248,246,242,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.08);display:flex;justify-content:center;overflow-x:auto;gap:0;}
+nav{position:sticky;top:0;z-index:100;background:rgba(248,246,242,.97);backdrop-filter:blur(10px);border-bottom:1px solid rgba(0,0,0,.08);display:flex;justify-content:center;overflow-x:auto;gap:0;}
 nav a{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;text-decoration:none;color:var(--stone);padding:1rem 1.3rem;border-bottom:3px solid transparent;transition:all .2s;white-space:nowrap;}
 nav a:hover{color:var(--forest);}
 nav a.active{color:var(--forest);border-bottom-color:var(--forest-light);}
@@ -234,13 +234,7 @@ footer a:hover{color:var(--forest-light);}
 .footer-logo{font-family:'Lora',serif;font-size:.95rem;font-weight:600;color:#fff;}
 
 /* LANG */
-.en{display:none;}.es{display:block;}
-span.es{display:inline;}
-span.en{display:none;}
-body.en span.es{display:none!important;}
-body.en span.en{display:inline!important;}
-body.en .es:not(span){display:none!important;}
-body.en .en:not(span){display:block!important;}
+
 
 /* ANIM */
 @keyframes fadeUp{from{opacity:0;transform:translateY(1.5rem);}to{opacity:1;transform:translateY(0);}}
@@ -272,11 +266,7 @@ body.en .en:not(span){display:block!important;}
 </head>
 <body>
 
-<div class="lang-bar">
-  <div class="brand-top"><strong>Dr. J. C. Bernal Alzate</strong> · UIEPA Ahuacatlán</div>
-  <div class="lang-btns">
-    <button class="lang-btn active" onclick="setLang('es')" id="btn-es">ES</button>
-    <button class="lang-btn" onclick="setLang('en')" id="btn-en">EN</button>
+<div class="lang-btns">
   </div>
 </div>
 
@@ -285,23 +275,23 @@ body.en .en:not(span){display:block!important;}
   <div class="hero-left">
     <div class="hero-eyebrow">
       <div class="eyebrow-dot"></div>
-      <span class="es">Investigador · Docente · UIEPA</span>
-      <span class="en">Researcher · Professor · UIEPA</span>
+      Investigador · Docente · UIEPA
+      
     </div>
     <h1 class="hero-name"><span class="first">José Claudio</span><br>Bernal Alzate</h1>
     <p class="hero-subtitle">
-      <span class="es">Doctor en Ciencias Agropecuarias con enfoque multidisciplinario en aprovechamiento de agrorecursos, gestión de la innovación y educación universitaria. Sierra Norte de Puebla, México.</span>
-      <span class="en">PhD in Agricultural Sciences with a multidisciplinary focus on agroresource utilization, innovation management, and university education. Sierra Norte de Puebla, Mexico.</span>
+      Doctor en Ciencias Agropecuarias con enfoque multidisciplinario en aprovechamiento de agrorecursos, gestión de la innovación y educación universitaria. Sierra Norte de Puebla, México.
+      
     </p>
     <div class="hero-badges">
-      <span class="hbadge hbadge-green">SNII — <span class="es">Candidato</span><span class="en">Candidate</span></span>
+      <span class="hbadge hbadge-green">SNII — Candidato</span>
       <span class="hbadge hbadge-orange">PRODEP 2024</span>
       <span class="hbadge hbadge-outline">ICA-UABC</span>
       <span class="hbadge hbadge-outline">UIEPA</span>
     </div>
     <div class="hero-cta">
-      <a href="#publicaciones" class="cta-btn cta-primary"><span class="es">Ver publicaciones</span><span class="en">See publications</span></a>
-      <a href="#contacto" class="cta-btn cta-outline"><span class="es">Contacto</span><span class="en">Contact</span></a>
+      <a href="#publicaciones" class="cta-btn cta-primary">Ver publicaciones</a>
+      <a href="#contacto" class="cta-btn cta-outline">Contacto</a>
     </div>
   </div>
   <div class="hero-right">
@@ -310,51 +300,51 @@ body.en .en:not(span){display:block!important;}
         <img id="hero-photo-img" src="" alt="" style="display:none">
         <div class="photo-placeholder" id="hero-photo-ph">
           <div class="photo-icon">📷</div>
-          <div class="photo-hint"><span class="es">Haz clic para añadir tu foto de perfil</span><span class="en">Click to add your profile photo</span></div>
+          <div class="photo-hint">Haz clic para añadir tu foto de perfil</div>
         </div>
       </div>
       <div class="photo-frame-meta">
         <div class="photo-meta-name">Dr. José Claudio Bernal Alzate</div>
-        <div class="photo-meta-role"><span class="es">Jefe de I+D · UIEPA Ahuacatlán, Puebla</span><span class="en">R&D Head · UIEPA Ahuacatlán, Puebla</span></div>
+        <div class="photo-meta-role">Jefe de I+D · UIEPA Ahuacatlán, Puebla</div>
       </div>
     </div>
   </div>
 </header>
 
 <div class="stats-row">
-  <div class="stat-box"><div class="stat-n">3</div><div class="stat-l"><span class="es">Artículos publicados</span><span class="en">Published articles</span></div></div>
-  <div class="stat-box"><div class="stat-n">4+</div><div class="stat-l"><span class="es">En revisión</span><span class="en">Under review</span></div></div>
-  <div class="stat-box"><div class="stat-n">4+</div><div class="stat-l"><span class="es">Tesistas dirigidos</span><span class="en">Students supervised</span></div></div>
-  <div class="stat-box"><div class="stat-n">2</div><div class="stat-l"><span class="es">Líneas de investigación</span><span class="en">Research lines</span></div></div>
+  <div class="stat-box"><div class="stat-n">3</div><div class="stat-l">Artículos publicados</div></div>
+  <div class="stat-box"><div class="stat-n">4+</div><div class="stat-l">En revisión</div></div>
+  <div class="stat-box"><div class="stat-n">4+</div><div class="stat-l">Tesistas dirigidos</div></div>
+  <div class="stat-box"><div class="stat-n">2</div><div class="stat-l">Líneas de investigación</div></div>
 </div>
 
 <nav id="mainNav">
-  <a href="#investigacion"><span class="es">Investigación</span><span class="en">Research</span></a>
-  <a href="#publicaciones"><span class="es">Publicaciones</span><span class="en">Publications</span></a>
-  <a href="#proyectos"><span class="es">Proyectos</span><span class="en">Projects</span></a>
-  <a href="#tesistas"><span class="es">Tesistas</span><span class="en">Students</span></a>
-  <a href="#divulgacion"><span class="es">Divulgación</span><span class="en">Outreach</span></a>
+  <a href="#investigacion">Investigación</a>
+  <a href="#publicaciones">Publicaciones</a>
+  <a href="#proyectos">Proyectos</a>
+  <a href="#tesistas">Tesistas</a>
+  <a href="#divulgacion">Divulgación</a>
   <a href="#cv">CV</a>
-  <a href="#contacto"><span class="es">Contacto</span><span class="en">Contact</span></a>
+  <a href="#contacto">Contacto</a>
 </nav>
 
 <!-- 01 INVESTIGACIÓN -->
 <section id="investigacion">
   <div class="container">
-    <div class="sec-header"><span class="sec-tag tag-green">01</span><h2 class="sec-title"><span class="es">Líneas de Investigación</span><span class="en">Research Lines</span></h2><div class="sec-line"></div></div>
+    <div class="sec-header"><span class="sec-tag tag-green">01</span><h2 class="sec-title">Líneas de Investigación</h2><div class="sec-line"></div></div>
     <div class="lines-grid">
       <div class="line-card green">
         <div class="line-icon">🌿</div>
-        <h3><span class="es">Aprovechamiento de los Agrorecursos</span><span class="en">Agroresource Utilization</span></h3>
-        <p class="es">Estudio y aplicación de plantas medicinales, técnicas de injerto y producción agrícola sostenible bajo condiciones de estrés, con enfoque en la biodiversidad de la Sierra Norte de Puebla.</p>
-        <p class="en">Study and application of medicinal plants, grafting techniques, and sustainable agricultural production under stress conditions, with a focus on the Sierra Norte de Puebla biodiversity.</p>
+        <h3>Aprovechamiento de los Agrorecursos</h3>
+        <p >Estudio y aplicación de plantas medicinales, técnicas de injerto y producción agrícola sostenible bajo condiciones de estrés, con enfoque en la biodiversidad de la Sierra Norte de Puebla.</p>
+        
         <div class="line-keywords"><span class="kw">Injertos</span><span class="kw">Plantas medicinales</span><span class="kw">Agroecología</span><span class="kw">Fitopatología</span></div>
       </div>
       <div class="line-card orange">
         <div class="line-icon">🔬</div>
-        <h3><span class="es">Multidisciplinariedad en Investigación y Educación Universitaria</span><span class="en">Multidisciplinarity in Research and Higher Education</span></h3>
-        <p class="es">Integración de enfoques de sistemas computacionales, agronegocios, mercados globales y gestión de la innovación para abordar problemas complejos en la academia y el sector productivo.</p>
-        <p class="en">Integration of computational systems, agribusiness, global markets, and innovation management to address complex problems in academia and the productive sector.</p>
+        <h3>Multidisciplinariedad en Investigación y Educación Universitaria</h3>
+        <p >Integración de enfoques de sistemas computacionales, agronegocios, mercados globales y gestión de la innovación para abordar problemas complejos en la academia y el sector productivo.</p>
+        
         <div class="line-keywords"><span class="kw orange">Agronegocios</span><span class="kw orange">Innovación</span><span class="kw orange">Costos</span><span class="kw orange">Diseño curricular</span></div>
       </div>
     </div>
@@ -364,7 +354,7 @@ body.en .en:not(span){display:block!important;}
 <!-- 02 PUBLICACIONES -->
 <section id="publicaciones">
   <div class="container">
-    <div class="sec-header"><span class="sec-tag tag-orange">02</span><h2 class="sec-title"><span class="es">Producción Científica</span><span class="en">Scientific Production</span></h2><div class="sec-line"></div></div>
+    <div class="sec-header"><span class="sec-tag tag-orange">02</span><h2 class="sec-title">Producción Científica</h2><div class="sec-line"></div></div>
     <div class="pub-list">
       <div class="pub-card">
         <div class="pub-year-badge"><div class="pub-yr">2025</div><div class="pub-yr-label">año</div></div>
@@ -397,11 +387,11 @@ body.en .en:not(span){display:block!important;}
         </div>
       </div>
       <div class="pub-card" style="border:1.5px dashed rgba(184,94,20,.4);">
-        <div class="pub-year-badge"><div class="pub-yr" style="color:var(--earth);">···</div><div class="pub-yr-label"><span class="es">proceso</span><span class="en">process</span></div></div>
+        <div class="pub-year-badge"><div class="pub-yr" style="color:var(--earth);">···</div><div class="pub-yr-label">proceso</div></div>
         <div>
-          <span class="pub-chip chip-orange"><span class="es">En revisión editorial</span><span class="en">Under review</span></span>
-          <div class="pub-title"><span class="es">3 artículos enviados a revistas arbitradas · 1 capítulo de libro</span><span class="en">3 articles submitted to peer-reviewed journals · 1 book chapter</span></div>
-          <p style="font-size:.78rem;color:var(--mist);margin-top:.4rem;"><span class="es">Detalles completos se publicarán al momento de aceptación.</span><span class="en">Full details will be published upon acceptance.</span></p>
+          <span class="pub-chip chip-orange">En revisión editorial</span>
+          <div class="pub-title">3 artículos enviados a revistas arbitradas · 1 capítulo de libro</div>
+          <p style="font-size:.78rem;color:var(--mist);margin-top:.4rem;">Detalles completos se publicarán al momento de aceptación.</p>
         </div>
       </div>
     </div>
@@ -412,59 +402,59 @@ body.en .en:not(span){display:block!important;}
 <div class="gallery-band">
   <div class="container">
     <div class="gallery-head">
-      <div class="gallery-title"><span class="es">📸 Galería de Trabajo</span><span class="en">📸 Work Gallery</span></div>
-      <div class="gallery-hint"><span class="es">Haz clic en cada imagen para añadir una foto</span><span class="en">Click each image to add a photo</span></div>
+      <div class="gallery-title">📸 Galería de Trabajo</div>
+      <div class="gallery-hint">Haz clic en cada imagen para añadir una foto</div>
     </div>
     <div class="gallery-grid">
       <div class="gallery-item" onclick="triggerUpload('gal0')">
         <img id="gal0-img" src="" alt="" style="display:none">
-        <div class="gallery-placeholder" id="gal0-ph"><div class="gi">🌿</div><span><span class="es">Campo / laboratorio</span><span class="en">Field / lab work</span></span></div>
+        <div class="gallery-placeholder" id="gal0-ph"><div class="gi">🌿</div><span>Campo / laboratorio</span></div>
       </div>
       <div class="gallery-item" onclick="triggerUpload('gal1')">
         <img id="gal1-img" src="" alt="" style="display:none">
-        <div class="gallery-placeholder" id="gal1-ph"><div class="gi">🔬</div><span><span class="es">Experimentos</span><span class="en">Experiments</span></span></div>
+        <div class="gallery-placeholder" id="gal1-ph"><div class="gi">🔬</div><span>Experimentos</span></div>
       </div>
       <div class="gallery-item" onclick="triggerUpload('gal2')">
         <img id="gal2-img" src="" alt="" style="display:none">
-        <div class="gallery-placeholder" id="gal2-ph"><div class="gi">🎓</div><span><span class="es">Congreso / presentación</span><span class="en">Congress / talk</span></span></div>
+        <div class="gallery-placeholder" id="gal2-ph"><div class="gi">🎓</div><span>Congreso / presentación</span></div>
       </div>
       <div class="gallery-item" onclick="triggerUpload('gal3')">
         <img id="gal3-img" src="" alt="" style="display:none">
-        <div class="gallery-placeholder" id="gal3-ph"><div class="gi">🌱</div><span><span class="es">Invernadero / cultivo</span><span class="en">Greenhouse / crops</span></span></div>
+        <div class="gallery-placeholder" id="gal3-ph"><div class="gi">🌱</div><span>Invernadero / cultivo</span></div>
       </div>
     </div>
-    <p class="gallery-upload-note">💡 <span class="es">Para publicar en línea: guarda tus fotos en la misma carpeta que index.html y actualiza el atributo src de cada imagen.</span><span class="en">To publish online: save your photos in the same folder as index.html and update each image's src attribute.</span></p>
+    <p class="gallery-upload-note">💡 Para publicar en línea: guarda tus fotos en la misma carpeta que index.html y actualiza el atributo src de cada imagen.</p>
   </div>
 </div>
 
 <!-- 03 PROYECTOS -->
 <section id="proyectos">
   <div class="container">
-    <div class="sec-header"><span class="sec-tag tag-blue">03</span><h2 class="sec-title"><span class="es">Proyectos y Gestión</span><span class="en">Projects & Management</span></h2><div class="sec-line"></div></div>
+    <div class="sec-header"><span class="sec-tag tag-blue">03</span><h2 class="sec-title">Proyectos y Gestión</h2><div class="sec-line"></div></div>
     <div class="projects-grid">
       <div class="proj-card">
-        <div class="proj-top"><div class="proj-icon-wrap piw-green">🎓</div><h3><span class="es">Maestría en Gestión de la Innovación y Desarrollo Sostenible</span><span class="en">Master's in Innovation Management & Sustainable Development</span></h3><p><span class="es">Diseño del estudio de factibilidad. Aprobada por COEPES Puebla.</span><span class="en">Feasibility study design. Approved by COEPES Puebla.</span></p></div>
-        <div class="proj-bottom"><span class="proj-status ps-active"><span class="es">Aprobada</span><span class="en">Approved</span></span><span class="proj-year">2025</span></div>
+        <div class="proj-top"><div class="proj-icon-wrap piw-green">🎓</div><h3>Maestría en Gestión de la Innovación y Desarrollo Sostenible</h3><p>Diseño del estudio de factibilidad. Aprobada por COEPES Puebla.</p></div>
+        <div class="proj-bottom"><span class="proj-status ps-active">Aprobada</span><span class="proj-year">2025</span></div>
       </div>
       <div class="proj-card">
-        <div class="proj-top"><div class="proj-icon-wrap piw-orange">📔</div><h3><span class="es">Revista Interserrana: Ciencia, Cultura y Territorio</span><span class="en">Revista Interserrana: Science, Culture & Territory</span></h3><p><span class="es">Fundación y gestión editorial. Registro INDAUTOR. Primer número: agosto 2026.</span><span class="en">Founding and editorial management. INDAUTOR registration. First issue: August 2026.</span></p></div>
-        <div class="proj-bottom"><span class="proj-status ps-active"><span class="es">En desarrollo</span><span class="en">In progress</span></span><span class="proj-year">2026</span></div>
+        <div class="proj-top"><div class="proj-icon-wrap piw-orange">📔</div><h3>Revista Interserrana: Ciencia, Cultura y Territorio</h3><p>Fundación y gestión editorial. Registro INDAUTOR. Primer número: agosto 2026.</p></div>
+        <div class="proj-bottom"><span class="proj-status ps-active">En desarrollo</span><span class="proj-year">2026</span></div>
       </div>
       <div class="proj-card">
-        <div class="proj-top"><div class="proj-icon-wrap piw-green">🌿</div><h3><span class="es">Antifúngicos de Plantas Medicinales — Sierra Norte de Puebla</span><span class="en">Antifungals from Medicinal Plants — Sierra Norte de Puebla</span></h3><p><span class="es">Extractos etanólicos vs. <em>Rhizoctonia solani</em> y <em>Phytophthora capsici</em>. Publicado en Polibotánica 2025.</span><span class="en">Ethanol extracts vs. <em>Rhizoctonia solani</em> and <em>Phytophthora capsici</em>. Published in Polibotánica 2025.</span></p></div>
-        <div class="proj-bottom"><span class="proj-status ps-done"><span class="es">Publicado</span><span class="en">Published</span></span><span class="proj-year">2025</span></div>
+        <div class="proj-top"><div class="proj-icon-wrap piw-green">🌿</div><h3>Antifúngicos de Plantas Medicinales — Sierra Norte de Puebla</h3><p>Extractos etanólicos vs. <em>Rhizoctonia solani</em> y <em>Phytophthora capsici</em>. Publicado en Polibotánica 2025.</p></div>
+        <div class="proj-bottom"><span class="proj-status ps-done">Publicado</span><span class="proj-year">2025</span></div>
       </div>
       <div class="proj-card">
-        <div class="proj-top"><div class="proj-icon-wrap piw-green">🔬</div><h3><span class="es">Injertos en Hortalizas bajo Condiciones de Estrés</span><span class="en">Vegetable Grafting under Stress Conditions</span></h3><p><span class="es">Evaluación agronómica de <em>Phaseolus vulgaris</em> L. sobre portainjertos de <em>P. coccineus</em>. Tesis doctoral.</span><span class="en">Agronomic evaluation of <em>Phaseolus vulgaris</em> L. on <em>P. coccineus</em> rootstocks. Doctoral thesis.</span></p></div>
-        <div class="proj-bottom"><span class="proj-status ps-done"><span class="es">Completado</span><span class="en">Completed</span></span><span class="proj-year">2016</span></div>
+        <div class="proj-top"><div class="proj-icon-wrap piw-green">🔬</div><h3>Injertos en Hortalizas bajo Condiciones de Estrés</h3><p>Evaluación agronómica de <em>Phaseolus vulgaris</em> L. sobre portainjertos de <em>P. coccineus</em>. Tesis doctoral.</p></div>
+        <div class="proj-bottom"><span class="proj-status ps-done">Completado</span><span class="proj-year">2016</span></div>
       </div>
       <div class="proj-card">
-        <div class="proj-top"><div class="proj-icon-wrap piw-blue">📋</div><h3><span class="es">Actualización de Programas Académicos COEPES</span><span class="en">Academic Program Updates — COEPES</span></h3><p><span class="es">Aprobación de Biotecnología, Ing. en Tecnología Informática y Gastronomía.</span><span class="en">Approval of Biotechnology, IT Engineering, and Gastronomy programs.</span></p></div>
-        <div class="proj-bottom"><span class="proj-status ps-active"><span class="es">Aprobado</span><span class="en">Approved</span></span><span class="proj-year">Mar. 2026</span></div>
+        <div class="proj-top"><div class="proj-icon-wrap piw-blue">📋</div><h3>Actualización de Programas Académicos COEPES</h3><p>Aprobación de Biotecnología, Ing. en Tecnología Informática y Gastronomía.</p></div>
+        <div class="proj-bottom"><span class="proj-status ps-active">Aprobado</span><span class="proj-year">Mar. 2026</span></div>
       </div>
       <div class="proj-card">
-        <div class="proj-top"><div class="proj-icon-wrap piw-orange">🏛️</div><h3><span class="es">V Congreso de Desarrollo Territorial — CDT 2025</span><span class="en">5th Territorial Development Congress — CDT 2025</span></h3><p><span class="es">Coordinador científico y financiero del evento académico regional.</span><span class="en">Scientific and financial coordinator of the regional academic event.</span></p></div>
-        <div class="proj-bottom"><span class="proj-status ps-done"><span class="es">Realizado</span><span class="en">Completed</span></span><span class="proj-year">2025</span></div>
+        <div class="proj-top"><div class="proj-icon-wrap piw-orange">🏛️</div><h3>V Congreso de Desarrollo Territorial — CDT 2025</h3><p>Coordinador científico y financiero del evento académico regional.</p></div>
+        <div class="proj-bottom"><span class="proj-status ps-done">Realizado</span><span class="proj-year">2025</span></div>
       </div>
     </div>
   </div>
@@ -473,72 +463,72 @@ body.en .en:not(span){display:block!important;}
 <!-- 04 TESISTAS -->
 <section id="tesistas">
   <div class="container">
-    <div class="sec-header"><span class="sec-tag tag-gold">04</span><h2 class="sec-title"><span class="es">Formación de Recursos Humanos</span><span class="en">Human Resource Training</span></h2><div class="sec-line"></div></div>
+    <div class="sec-header"><span class="sec-tag tag-gold">04</span><h2 class="sec-title">Formación de Recursos Humanos</h2><div class="sec-line"></div></div>
     <div class="student-photos">
       <div class="stu-photo" onclick="triggerUpload('stu0')">
         <img id="stu0-img" src="" alt="" style="display:none">
-        <div class="stu-placeholder" id="stu0-ph"><div class="stu-initials">T1</div><div class="stu-name"><span class="es">Tesista 1</span><span class="en">Student 1</span></div><div class="stu-prog"><span class="es">Ing. Agroindustrial</span><span class="en">Agroindustrial Eng.</span></div></div>
-        <div class="stu-honors">★ <span class="es">Honorífica</span><span class="en">Honors</span></div>
+        <div class="stu-placeholder" id="stu0-ph"><div class="stu-initials">T1</div><div class="stu-name">Tesista 1</div><div class="stu-prog">Ing. Agroindustrial</div></div>
+        <div class="stu-honors">★ Honorífica</div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu1')">
         <img id="stu1-img" src="" alt="" style="display:none">
-        <div class="stu-placeholder" id="stu1-ph"><div class="stu-initials">T2</div><div class="stu-name"><span class="es">Tesista 2</span><span class="en">Student 2</span></div><div class="stu-prog"><span class="es">Enfermería</span><span class="en">Nursing</span></div></div>
-        <div class="stu-honors">★ <span class="es">Honorífica</span><span class="en">Honors</span></div>
+        <div class="stu-placeholder" id="stu1-ph"><div class="stu-initials">T2</div><div class="stu-name">Tesista 2</div><div class="stu-prog">Enfermería</div></div>
+        <div class="stu-honors">★ Honorífica</div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu2')">
         <img id="stu2-img" src="" alt="" style="display:none">
-        <div class="stu-placeholder" id="stu2-ph"><div class="stu-initials">T3</div><div class="stu-name"><span class="es">Tesista 3</span><span class="en">Student 3</span></div><div class="stu-prog"><span class="es">Biotecnología</span><span class="en">Biotechnology</span></div></div>
+        <div class="stu-placeholder" id="stu2-ph"><div class="stu-initials">T3</div><div class="stu-name">Tesista 3</div><div class="stu-prog">Biotecnología</div></div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu3')">
         <img id="stu3-img" src="" alt="" style="display:none">
-        <div class="stu-placeholder" id="stu3-ph"><div class="stu-initials">T4</div><div class="stu-name"><span class="es">Tesista 4</span><span class="en">Student 4</span></div><div class="stu-prog"><span class="es">Gastronomía</span><span class="en">Gastronomy</span></div></div>
+        <div class="stu-placeholder" id="stu3-ph"><div class="stu-initials">T4</div><div class="stu-name">Tesista 4</div><div class="stu-prog">Gastronomía</div></div>
       </div>
     </div>
     <table class="thesis-table">
-      <thead><tr><th><span class="es">Estudiante</span><span class="en">Student</span></th><th><span class="es">Carrera</span><span class="en">Program</span></th><th><span class="es">Área</span><span class="en">Area</span></th><th><span class="es">Año</span><span class="en">Year</span></th><th><span class="es">Distinción</span><span class="en">Distinction</span></th></tr></thead>
+      <thead><tr><th>Estudiante</th><th>Carrera</th><th>Área</th><th>Año</th><th>Distinción</th></tr></thead>
       <tbody>
-        <tr><td class="stu-n"><span class="es">Tesista 1</span><span class="en">Student 1</span></td><td><span class="prog-pill" style="background:var(--forest-pale);color:var(--forest);">Agroindustrial</span></td><td><span class="es">Agronegocios / Costos</span><span class="en">Agribusiness / Costs</span></td><td>2024–2025</td><td><span class="honors-star">★ Honorífica</span></td></tr>
-        <tr><td class="stu-n"><span class="es">Tesista 2</span><span class="en">Student 2</span></td><td><span class="prog-pill" style="background:var(--sky-pale);color:var(--sky);">Enfermería</span></td><td><span class="es">Investigación en salud</span><span class="en">Health research</span></td><td>2024–2025</td><td><span class="honors-star">★ Honorífica</span></td></tr>
-        <tr><td class="stu-n"><span class="es">Tesista 3</span><span class="en">Student 3</span></td><td><span class="prog-pill" style="background:var(--earth-pale);color:var(--earth);">Biotecnología</span></td><td><span class="es">Agrorecursos</span><span class="en">Agroresources</span></td><td>2024–2025</td><td>—</td></tr>
-        <tr><td class="stu-n"><span class="es">Tesista 4</span><span class="en">Student 4</span></td><td><span class="prog-pill" style="background:var(--gold-pale);color:#7a5c00;">Gastronomía</span></td><td><span class="es">Innovación alimentaria</span><span class="en">Food innovation</span></td><td>2024–2025</td><td>—</td></tr>
+        <tr><td class="stu-n">Tesista 1</td><td><span class="prog-pill" style="background:var(--forest-pale);color:var(--forest);">Agroindustrial</span></td><td>Agronegocios / Costos</td><td>2024–2025</td><td><span class="honors-star">★ Honorífica</span></td></tr>
+        <tr><td class="stu-n">Tesista 2</td><td><span class="prog-pill" style="background:var(--sky-pale);color:var(--sky);">Enfermería</span></td><td>Investigación en salud</td><td>2024–2025</td><td><span class="honors-star">★ Honorífica</span></td></tr>
+        <tr><td class="stu-n">Tesista 3</td><td><span class="prog-pill" style="background:var(--earth-pale);color:var(--earth);">Biotecnología</span></td><td>Agrorecursos</td><td>2024–2025</td><td>—</td></tr>
+        <tr><td class="stu-n">Tesista 4</td><td><span class="prog-pill" style="background:var(--gold-pale);color:#7a5c00;">Gastronomía</span></td><td>Innovación alimentaria</td><td>2024–2025</td><td>—</td></tr>
       </tbody>
     </table>
-    <p style="font-size:.72rem;color:var(--mist);margin-top:1rem;">* <span class="es">Los nombres y fotos de los estudiantes se pueden agregar con su consentimiento.</span><span class="en">Student names and photos can be added with their consent.</span></p>
+    <p style="font-size:.72rem;color:var(--mist);margin-top:1rem;">* Los nombres y fotos de los estudiantes se pueden agregar con su consentimiento.</p>
   </div>
 </section>
 
 <!-- 05 DIVULGACIÓN -->
 <section id="divulgacion">
   <div class="container">
-    <div class="sec-header"><span class="sec-tag tag-blue">05</span><h2 class="sec-title"><span class="es">Vinculación y Divulgación</span><span class="en">Outreach & Knowledge Transfer</span></h2><div class="sec-line"></div></div>
+    <div class="sec-header"><span class="sec-tag tag-blue">05</span><h2 class="sec-title">Vinculación y Divulgación</h2><div class="sec-line"></div></div>
     <div class="divulg-grid">
       <div class="divulg-card">
         <div class="divulg-img di-green" onclick="triggerUpload('dimg0')">
           <img id="dimg0-img" src="" alt="" style="display:none">
-          <div class="divulg-img-placeholder" id="dimg0-ph"><div class="di-icon">📄</div><span><span class="es">Añadir imagen</span><span class="en">Add image</span></span></div>
+          <div class="divulg-img-placeholder" id="dimg0-ph"><div class="di-icon">📄</div><span>Añadir imagen</span></div>
         </div>
-        <div class="divulg-body"><span class="divulg-cat cat-green"><span class="es">Divulgación científica</span><span class="en">Science outreach</span></span><h3><span class="es">Publicación de divulgación científica</span><span class="en">Science dissemination publication</span></h3><p><span class="es">Comunicación del conocimiento generado hacia públicos no especializados.</span><span class="en">Communicating scientific knowledge to non-specialist audiences.</span></p></div>
+        <div class="divulg-body"><span class="divulg-cat cat-green">Divulgación científica</span><h3>Publicación de divulgación científica</h3><p>Comunicación del conocimiento generado hacia públicos no especializados.</p></div>
       </div>
       <div class="divulg-card">
         <div class="divulg-img di-orange" onclick="triggerUpload('dimg1')">
           <img id="dimg1-img" src="" alt="" style="display:none">
-          <div class="divulg-img-placeholder" id="dimg1-ph"><div class="di-icon">🏛️</div><span><span class="es">Añadir foto del congreso</span><span class="en">Add congress photo</span></span></div>
+          <div class="divulg-img-placeholder" id="dimg1-ph"><div class="di-icon">🏛️</div><span>Añadir foto del congreso</span></div>
         </div>
-        <div class="divulg-body"><span class="divulg-cat cat-orange"><span class="es">Congreso académico</span><span class="en">Academic Congress</span></span><h3><span class="es">V Congreso de Desarrollo Territorial — CDT 2025</span><span class="en">5th Territorial Development Congress — CDT 2025</span></h3><p><span class="es">Coordinación científica de evento regional interinstitucional.</span><span class="en">Scientific coordination of regional inter-institutional event.</span></p></div>
+        <div class="divulg-body"><span class="divulg-cat cat-orange">Congreso académico</span><h3>V Congreso de Desarrollo Territorial — CDT 2025</h3><p>Coordinación científica de evento regional interinstitucional.</p></div>
       </div>
       <div class="divulg-card">
         <div class="divulg-img di-blue" onclick="triggerUpload('dimg2')">
           <img id="dimg2-img" src="" alt="" style="display:none">
-          <div class="divulg-img-placeholder" id="dimg2-ph"><div class="di-icon">📔</div><span><span class="es">Añadir portada de la revista</span><span class="en">Add journal cover</span></span></div>
+          <div class="divulg-img-placeholder" id="dimg2-ph"><div class="di-icon">📔</div><span>Añadir portada de la revista</span></div>
         </div>
-        <div class="divulg-body"><span class="divulg-cat cat-blue"><span class="es">Revista académica</span><span class="en">Academic journal</span></span><h3><span class="es">Revista Interserrana: Ciencia, Cultura y Territorio</span><span class="en">Revista Interserrana: Science, Culture & Territory</span></h3><p><span class="es">Nueva revista institucional. Registro INDAUTOR completado. Primer número agosto 2026.</span><span class="en">New institutional journal. INDAUTOR registration completed. First issue August 2026.</span></p></div>
+        <div class="divulg-body"><span class="divulg-cat cat-blue">Revista académica</span><h3>Revista Interserrana: Ciencia, Cultura y Territorio</h3><p>Nueva revista institucional. Registro INDAUTOR completado. Primer número agosto 2026.</p></div>
       </div>
       <div class="divulg-card">
         <div class="divulg-img di-gold" onclick="triggerUpload('dimg3')">
           <img id="dimg3-img" src="" alt="" style="display:none">
-          <div class="divulg-img-placeholder" id="dimg3-ph"><div class="di-icon">🏭</div><span><span class="es">Añadir foto de la industria</span><span class="en">Add industry photo</span></span></div>
+          <div class="divulg-img-placeholder" id="dimg3-ph"><div class="di-icon">🏭</div><span>Añadir foto de la industria</span></div>
         </div>
-        <div class="divulg-body"><span class="divulg-cat cat-gold"><span class="es">Vinculación productiva</span><span class="en">Industry linkage</span></span><h3><span class="es">Transferencia tecnológica — Industria agroalimentaria</span><span class="en">Technology Transfer — Agrifood Industry</span></h3><p><span class="es">Experiencia en Green Stripe de México e Hishtil México: injertación industrial a gran escala.</span><span class="en">Experience at Green Stripe de México and Hishtil México: large-scale industrial grafting.</span></p></div>
+        <div class="divulg-body"><span class="divulg-cat cat-gold">Vinculación productiva</span><h3>Transferencia tecnológica — Industria agroalimentaria</h3><p>Experiencia en Green Stripe de México e Hishtil México: injertación industrial a gran escala.</p></div>
       </div>
     </div>
   </div>
@@ -549,15 +539,15 @@ body.en .en:not(span){display:block!important;}
   <div class="container">
     <div class="cv-inner">
       <div class="cv-left">
-        <h2><span class="es">Descarga el CV completo</span><span class="en">Download full CV</span></h2>
-        <p><span class="es">Documento con formación académica, experiencia profesional, producción científica, proyectos y logros institucionales. Actualizado marzo 2026.</span><span class="en">Document including academic training, professional experience, scientific production, projects and institutional achievements. Updated March 2026.</span></p>
-        <a href="Claudio_Bernal_CV.pdf" download class="btn-dl">↓ <span class="es">Descargar CV (PDF)</span><span class="en">Download CV (PDF)</span></a>
+        <h2>Descarga el CV completo</h2>
+        <p>Documento con formación académica, experiencia profesional, producción científica, proyectos y logros institucionales. Actualizado marzo 2026.</p>
+        <a href="Claudio_Bernal_CV.pdf" download class="btn-dl">↓ Descargar CV (PDF)</a>
       </div>
       <div class="profiles-stack">
-        <a href="https://scholar.google.com" target="_blank" class="prof-link"><div class="prof-icon">🎓</div><div><div class="prof-label">Google Scholar</div><div class="prof-sub"><span class="es">Citas y métricas</span><span class="en">Citations & metrics</span></div></div></a>
-        <a href="https://www.researchgate.net" target="_blank" class="prof-link"><div class="prof-icon">🔬</div><div><div class="prof-label">ResearchGate</div><div class="prof-sub"><span class="es">Red académica</span><span class="en">Academic network</span></div></div></a>
-        <a href="https://orcid.org" target="_blank" class="prof-link"><div class="prof-icon">🆔</div><div><div class="prof-label">ORCID</div><div class="prof-sub"><span class="es">Identificador único</span><span class="en">Unique identifier</span></div></div></a>
-        <a href="https://rizoma.conahcyt.mx" target="_blank" class="prof-link"><div class="prof-icon">🌿</div><div><div class="prof-label">Rizoma SECIHTI</div><div class="prof-sub"><span class="es">Perfil SNII y CVU</span><span class="en">SNII profile & CVU</span></div></div></a>
+        <a href="https://scholar.google.com" target="_blank" class="prof-link"><div class="prof-icon">🎓</div><div><div class="prof-label">Google Scholar</div><div class="prof-sub">Citas y métricas</div></div></a>
+        <a href="https://www.researchgate.net" target="_blank" class="prof-link"><div class="prof-icon">🔬</div><div><div class="prof-label">ResearchGate</div><div class="prof-sub">Red académica</div></div></a>
+        <a href="https://orcid.org" target="_blank" class="prof-link"><div class="prof-icon">🆔</div><div><div class="prof-label">ORCID</div><div class="prof-sub">Identificador único</div></div></a>
+        <a href="https://rizoma.conahcyt.mx" target="_blank" class="prof-link"><div class="prof-icon">🌿</div><div><div class="prof-label">Rizoma SECIHTI</div><div class="prof-sub">Perfil SNII y CVU</div></div></a>
       </div>
     </div>
   </div>
@@ -566,23 +556,23 @@ body.en .en:not(span){display:block!important;}
 <!-- 07 CONTACTO -->
 <section id="contacto">
   <div class="container">
-    <div class="sec-header"><span class="sec-tag tag-green">07</span><h2 class="sec-title"><span class="es">Contacto</span><span class="en">Contact</span></h2><div class="sec-line"></div></div>
+    <div class="sec-header"><span class="sec-tag tag-green">07</span><h2 class="sec-title">Contacto</h2><div class="sec-line"></div></div>
     <div class="contact-wrap">
       <div class="contact-info">
-        <h2><span class="es">¿Proyecto o colaboración en mente?</span><span class="en">Have a project or collaboration in mind?</span></h2>
-        <p><span class="es">Disponible para proyectos conjuntos, asesorías, ponencias y redes de investigación.</span><span class="en">Available for joint projects, consultations, talks, and research networks.</span></p>
+        <h2>¿Proyecto o colaboración en mente?</h2>
+        <p>Disponible para proyectos conjuntos, asesorías, ponencias y redes de investigación.</p>
         <div class="contact-item"><div class="ci-icon">✉</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adcfc8dfc3ccc1c7c2dec8cec1ccd8c9c4c2edcac0ccc4c183cec2c0">[email&#160;protected]</a></div></div></div>
-        <div class="contact-item"><div class="ci-icon">📱</div><div><div class="ci-label"><span class="es">Teléfono</span><span class="en">Phone</span></div><div class="ci-val">+52 797 123 0221</div></div></div>
-        <div class="contact-item"><div class="ci-icon">📍</div><div><div class="ci-label"><span class="es">Institución</span><span class="en">Institution</span></div><div class="ci-val">UIEPA — Ahuacatlán, Puebla, México</div></div></div>
+        <div class="contact-item"><div class="ci-icon">📱</div><div><div class="ci-label">Teléfono</div><div class="ci-val">+52 797 123 0221</div></div></div>
+        <div class="contact-item"><div class="ci-icon">📍</div><div><div class="ci-label">Institución</div><div class="ci-val">UIEPA — Ahuacatlán, Puebla, México</div></div></div>
       </div>
       <form class="contact-form" onsubmit="sendForm(event)">
         <div class="form-row">
-          <div class="fg"><label><span class="es">Nombre</span><span class="en">Name</span></label><input type="text" required></div>
+          <div class="fg"><label>Nombre</label><input type="text" required></div>
           <div class="fg"><label>Email</label><input type="email" required></div>
         </div>
-        <div class="fg"><label><span class="es">Institución</span><span class="en">Institution</span></label><input type="text"></div>
-        <div class="fg"><label><span class="es">Mensaje</span><span class="en">Message</span></label><textarea rows="5" required></textarea></div>
-        <button type="submit" class="btn-send" id="sendBtn"><span class="es">Enviar mensaje →</span><span class="en">Send message →</span></button>
+        <div class="fg"><label>Institución</label><input type="text"></div>
+        <div class="fg"><label>Mensaje</label><textarea rows="5" required></textarea></div>
+        <button type="submit" class="btn-send" id="sendBtn">Enviar mensaje →</button>
       </form>
     </div>
   </div>
@@ -590,18 +580,13 @@ body.en .en:not(span){display:block!important;}
 
 <footer>
   <div class="footer-logo">Dr. J. C. Bernal Alzate</div>
-  <div><span class="es">© 2026 · UIEPA Ahuacatlán, Puebla · Difusión científica y postulación SNII</span><span class="en">© 2026 · UIEPA Ahuacatlán, Puebla · Scientific outreach & SNII application</span></div>
-  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ <span class="es">Inicio</span><span class="en">Top</span></a>
+  <div>© 2026 · UIEPA Ahuacatlán, Puebla · Difusión científica y postulación SNII</div>
+  <a href="#" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">↑ Inicio</a>
 </footer>
 
 <input type="file" id="fileInput" accept="image/*" style="display:none">
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-function setLang(l){
-  document.body.classList.toggle('en',l==='en');
-  document.getElementById('btn-en').classList.toggle('active',l==='en');
-  document.getElementById('btn-es').classList.toggle('active',l!=='en');
-}
 let cur=null;
 function triggerUpload(id){cur=id;document.getElementById('fileInput').click();}
 document.getElementById('fileInput').addEventListener('change',function(){
@@ -620,7 +605,7 @@ function sendForm(e){
   btn.textContent=isEn?'✓ Message sent!':'✓ Mensaje enviado';
   btn.style.background='var(--forest-mid)';
   setTimeout(()=>{
-    btn.innerHTML=isEn?'<span class="en">Send message →</span>':'<span class="es">Enviar mensaje →</span>';
+    btn.innerHTML=isEn?'':'Enviar mensaje →';
     btn.style.background='';
   },3000);
 }
