@@ -235,7 +235,8 @@ footer a:hover{color:var(--forest-light);}
 
 /* LANG */
 .en{display:none;}.es{display:block;}
-span.es,span.en{display:inline;}
+span.es{display:inline;}
+span.en{display:none;}
 body.en span.es{display:none!important;}
 body.en span.en{display:inline!important;}
 body.en .es:not(span){display:none!important;}
@@ -570,7 +571,7 @@ body.en .en:not(span){display:block!important;}
       <div class="contact-info">
         <h2><span class="es">¿Proyecto o colaboración en mente?</span><span class="en">Have a project or collaboration in mind?</span></h2>
         <p><span class="es">Disponible para proyectos conjuntos, asesorías, ponencias y redes de investigación.</span><span class="en">Available for joint projects, consultations, talks, and research networks.</span></p>
-        <div class="contact-item"><div class="ci-icon">✉</div><div><div class="ci-label">Email</div><div class="ci-val">bernaljoseclaudio@gmail.com</div></div></div>
+        <div class="contact-item"><div class="ci-icon">✉</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="adcfc8dfc3ccc1c7c2dec8cec1ccd8c9c4c2edcac0ccc4c183cec2c0">[email&#160;protected]</a></div></div></div>
         <div class="contact-item"><div class="ci-icon">📱</div><div><div class="ci-label"><span class="es">Teléfono</span><span class="en">Phone</span></div><div class="ci-val">+52 797 123 0221</div></div></div>
         <div class="contact-item"><div class="ci-icon">📍</div><div><div class="ci-label"><span class="es">Institución</span><span class="en">Institution</span></div><div class="ci-val">UIEPA — Ahuacatlán, Puebla, México</div></div></div>
       </div>
@@ -595,7 +596,7 @@ body.en .en:not(span){display:block!important;}
 
 <input type="file" id="fileInput" accept="image/*" style="display:none">
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 function setLang(l){
   document.body.classList.toggle('en',l==='en');
   document.getElementById('btn-en').classList.toggle('active',l==='en');
@@ -624,12 +625,4 @@ function sendForm(e){
   },3000);
 }
 const secs=document.querySelectorAll('section[id]');
-const links=document.querySelectorAll('nav a');
-window.addEventListener('scroll',()=>{
-  let c='';
-  secs.forEach(s=>{if(window.scrollY>=s.offsetTop-160)c=s.id;});
-  links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+c));
-});
-</script>
-</body>
-</html>
+const links=document.querySelectorAll
