@@ -489,40 +489,40 @@ footer a:hover{color:var(--sage-light);}
     <div class="sec-header"><span class="sec-num">04</span><h2 class="sec-title">Formación de Recursos Humanos</h2><div class="sec-line"></div></div>
 
     <div class="photo-guide">
-      <strong>📁 Para agregar fotos de defensa de tesis:</strong> sube las imágenes a GitHub en una carpeta llamada <code>tesistas/</code>. Los nombres de archivo deben ser exactamente: <code>tesistas/stu0.jpg</code> (Jaquelyn), <code>tesistas/stu1.jpg</code> (Karla), <code>tesistas/stu2.jpg</code> (Francisco), <code>tesistas/stu3.jpg</code> (Cecilia), <code>tesistas/stu4.jpg</code> (Anahí), <code>tesistas/stu5.jpg</code> (Norma Lidia), <code>tesistas/stu6.jpg</code> (Marycarmen).
+      <strong>📁 Para agregar fotos de defensa de tesis:</strong> sube las imágenes a GitHub en una carpeta llamada <code>tesistas/</code>. Los nombres de archivo deben ser: <code>stu0</code> (Jaquelyn), <code>stu1</code> (Karla), <code>stu2</code> (Francisco), <code>stu3</code> (Cecilia), <code>stu4</code> (Anahí), <code>stu5</code> (Norma Lidia), <code>stu6</code> (Marycarmen). Se aceptan extensiones <code>.jpg</code> o <code>.jpeg</code>.
     </div>
 
     <div class="student-photos">
       <div class="stu-photo" onclick="triggerUpload('stu0')">
-        <img id="stu0-img" src="tesistas/stu0.jpg" alt="Jaquelyn López Gutiérrez" onerror="this.style.display='none';document.getElementById('stu0-ph').style.display='flex';">
+        <img id="stu0-img" src="tesistas/stu0.jpg" onerror="this.src='tesistas/stu0.jpeg';this.onerror=function(){this.style.display='none';document.getElementById('stu0-ph').style.display='flex';}" alt="Jaquelyn López Gutiérrez">
         <div class="stu-placeholder" id="stu0-ph"><div class="stu-initials">JL</div><div class="stu-name">Jaquelyn López Gutiérrez</div><div class="stu-prog">Biotecnología</div></div>
         <div class="stu-honors">★ Honorífica</div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu1')">
-        <img id="stu1-img" src="tesistas/stu1.jpg" alt="Karla Arroyo Guevara" onerror="this.style.display='none';document.getElementById('stu1-ph').style.display='flex';">
+        <img id="stu1-img" src="tesistas/stu1.jpg" onerror="this.src='tesistas/stu1.jpeg';this.onerror=function(){this.style.display='none';document.getElementById('stu1-ph').style.display='flex';}" alt="Karla Arroyo Guevara">
         <div class="stu-placeholder" id="stu1-ph"><div class="stu-initials">KA</div><div class="stu-name">Karla Arroyo Guevara</div><div class="stu-prog">Biotecnología</div></div>
         <div class="stu-honors">★ Honorífica</div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu2')">
-        <img id="stu2-img" src="tesistas/stu2.jpg" alt="Francisco Agustín Oropeza" onerror="this.style.display='none';document.getElementById('stu2-ph').style.display='flex';">
+        <img id="stu2-img" src="tesistas/stu2.jpg" onerror="this.src='tesistas/stu2.jpeg';this.onerror=function(){this.style.display='none';document.getElementById('stu2-ph').style.display='flex';}" alt="Francisco Agustín Oropeza">
         <div class="stu-placeholder" id="stu2-ph"><div class="stu-initials">FA</div><div class="stu-name">Francisco Agustín Oropeza</div><div class="stu-prog">Ing. Agroindustrial</div></div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu3')">
-        <img id="stu3-img" src="tesistas/stu3.jpg" alt="Cecilia Lecona Gálvez" onerror="this.style.display='none';document.getElementById('stu3-ph').style.display='flex';">
+        <img id="stu3-img" src="tesistas/stu3.jpg" onerror="this.src='tesistas/stu3.jpeg';this.onerror=function(){this.style.display='none';document.getElementById('stu3-ph').style.display='flex';}" alt="Cecilia Lecona Gálvez">
         <div class="stu-placeholder" id="stu3-ph"><div class="stu-initials">CL</div><div class="stu-name">Cecilia Lecona Gálvez</div><div class="stu-prog">Enfermería</div></div>
         <div class="stu-honors">★ Honorífica</div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu4')">
-        <img id="stu4-img" src="tesistas/stu4.jpg" alt="Anahí Soto" onerror="this.style.display='none';document.getElementById('stu4-ph').style.display='flex';">
+        <img id="stu4-img" src="tesistas/stu4.jpg" onerror="this.src='tesistas/stu4.jpeg';this.onerror=function(){this.style.display='none';document.getElementById('stu4-ph').style.display='flex';}" alt="Anahí Soto">
         <div class="stu-placeholder" id="stu4-ph"><div class="stu-initials">AS</div><div class="stu-name">Anahí Soto</div><div class="stu-prog">Enfermería</div></div>
         <div class="stu-honors">★ Honorífica</div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu5')">
-        <img id="stu5-img" src="tesistas/stu5.jpg" alt="Norma Lidia Galindo" onerror="this.style.display='none';document.getElementById('stu5-ph').style.display='flex';">
+        <img id="stu5-img" src="tesistas/stu5.jpg" onerror="this.src='tesistas/stu5.jpeg';this.onerror=function(){this.style.display='none';document.getElementById('stu5-ph').style.display='flex';}" alt="Norma Lidia Galindo">
         <div class="stu-placeholder" id="stu5-ph"><div class="stu-initials">NG</div><div class="stu-name">Norma Lidia Galindo</div><div class="stu-prog">Enfermería</div></div>
       </div>
       <div class="stu-photo" onclick="triggerUpload('stu6')">
-        <img id="stu6-img" src="tesistas/stu6.jpg" alt="Marycarmen Aguilar Herrera" onerror="this.style.display='none';document.getElementById('stu6-ph').style.display='flex';">
+        <img id="stu6-img" src="tesistas/stu6.jpg" onerror="this.src='tesistas/stu6.jpeg';this.onerror=function(){this.style.display='none';document.getElementById('stu6-ph').style.display='flex';}" alt="Marycarmen Aguilar Herrera">
         <div class="stu-placeholder" id="stu6-ph"><div class="stu-initials">MA</div><div class="stu-name">Marycarmen Aguilar Herrera</div><div class="stu-prog">Ing. Agroindustrial</div></div>
       </div>
     </div>
@@ -615,7 +615,7 @@ footer a:hover{color:var(--sage-light);}
       <div class="contact-info">
         <h2>¿Proyecto o colaboración en mente?</h2>
         <p>Disponible para proyectos conjuntos, asesorías, ponencias y redes de investigación.</p>
-        <div class="contact-item"><div class="ci-icon">✉</div><div><div class="ci-label">Email</div><div class="ci-val">bernaljoseclaudio@gmail.com</div></div></div>
+        <div class="contact-item"><div class="ci-icon">✉</div><div><div class="ci-label">Email</div><div class="ci-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f39196819d929f999c8096909f9286979a9cb3949e929a9fdd909c9e">[email&#160;protected]</a></div></div></div>
         <div class="contact-item"><div class="ci-icon">📱</div><div><div class="ci-label">Teléfono</div><div class="ci-val">+52 797 123 0221</div></div></div>
         <div class="contact-item"><div class="ci-icon">📍</div><div><div class="ci-label">Institución</div><div class="ci-val">UIEPA — Ahuacatlán, Puebla, México</div></div></div>
       </div>
@@ -640,7 +640,7 @@ footer a:hover{color:var(--sage-light);}
 
 <input type="file" id="fileInput" accept="image/*" style="display:none">
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // VISIT COUNTER — starts at 61, persists in localStorage
 (function(){
   const key = 'jcba_visits';
@@ -675,11 +675,4 @@ function sendForm(e){
 // ACTIVE NAV
 const secs  = document.querySelectorAll('section[id]');
 const links = document.querySelectorAll('nav a');
-window.addEventListener('scroll', ()=>{
-  let c = '';
-  secs.forEach(s=>{ if(window.scrollY >= s.offsetTop - 160) c = s.id; });
-  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + c));
-});
-</script>
-</body>
-</html>
+window.a
